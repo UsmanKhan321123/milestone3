@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="resume-heading">Resume Builder</h1>
+        <form id="resume-form">
+            <!-- Personal Information -->
+            <fieldset>
+                <legend>Personal Information</legend>
+                <div class="form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form">
+                    <label for="contact">Contact:</label>
+                    <input type="tel" id="contact" name="contact" required>
+                </div>
+            </fieldset>
+
+            <!-- Education -->
+            <fieldset>
+                <legend>Education</legend>
+                <div class="form">
+                    <label for="degree">Degree:</label>
+                    <input type="text" id="degree" name="degree" required>
+                </div>
+                <div class="form">
+                    <label for="university">University:</label>
+                    <input type="text" id="university" name="university" required>
+                </div>
+                <div class="form">
+                    <label for="grad-year">Graduation Year:</label>
+                    <input type="text" id="grad-year" name="grad-year" required>
+                </div>
+            </fieldset>
+
+            <!-- Experience -->
+            <fieldset>
+                <legend>Experience</legend>
+                <div class="form">
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                <div class="form">
+                    <label for="job-title">Job Title:</label>
+                    <input type="text" id="job-title" name="job-title" required>
+                </div>
+                <div class="form">
+                    <label for="duration">Duration:</label>
+                    <input type="text" id="duration" name="duration" required>
+                </div>
+            </fieldset>
+
+            <!-- Skills -->
+            <fieldset>
+                <legend>Skills</legend>
+                <div class="form">
+                    <label for="skills">Enter your skills:</label>
+                    <textarea id="skills" name="skills" rows="4" required></textarea>
+                </div>
+            </fieldset>
+
+            <div class="form">
+                <button type="button" id="build-resume">Build Resume</button>
+            </div>
+        </form>
+
+        <hr>
+
+        <!-- Live Resume Display -->
+<div id="live-resume">
+        <div id="resume-output">
+            <h1 class="resume-heading">Resume</h1>
+            <div id="personal-info-output">
+                <h3>Personal Information :</h3><br>
+                <p>Name: <span id="display-name"></span></p>
+                <p>Email: <span id="display-email"></span></p>
+                <p>Contact: <span id="display-contact"></span></p>
+            </div>
+
+            <div id="education-output">
+                <h3>Education :</h3><br>
+                <p>Degree: <span id="display-degree"></span></p>
+                <p>University: <span id="display-university"></span></p>
+                <p>Graduation Year: <span id="display-grad-year"></span></p>
+            </div>
+
+            <div id="experience-output">
+                <h3>Experience :</h3><br>
+                <p>Company: <span id="display-company"></span></p>
+                <p>Job Title: <span id="display-job-title"></span></p>
+                <p>Duration: <span id="display-duration"></span></p>
+            </div>
+
+            <div id="skills-output">
+                <h3>Skills :</h3>
+                <p><span id="display-skills"></span></p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <script src="app.js"></script>
+</body>
+</html>
